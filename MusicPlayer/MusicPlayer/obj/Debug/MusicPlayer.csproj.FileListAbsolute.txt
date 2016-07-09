@@ -1,0 +1,11 @@
+E:\mas\git\GroupMusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csprojResolveAssemblyReference.cache
+E:\mas\git\GroupMusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\Window1.baml
+E:\mas\git\GroupMusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\Window1.g.cs
+E:\mas\git\GroupMusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\App.g.cs
+E:\mas\git\GroupMusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer_MarkupCompile.cache
+E:\mas\git\GroupMusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.g.resources
+E:\mas\git\GroupMusicPlayer\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe.config
+E:\mas\git\GroupMusicPlayer\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe
+E:\mas\git\GroupMusicPlayer\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.pdb
+E:\mas\git\GroupMusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe
+E:\mas\git\GroupMusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.pdb
