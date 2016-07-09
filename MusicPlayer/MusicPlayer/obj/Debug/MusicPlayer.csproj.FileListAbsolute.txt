@@ -33,3 +33,6 @@ E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\bin\Debug\System.Windows.Interact
 E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\App.baml
 E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\Views\MainWindow\MainWindowView.baml
 E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.g.resources
+d:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe.config
+d:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe
+d:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.pdb
