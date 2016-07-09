@@ -26,9 +26,12 @@ namespace MusicPlayer
         {
 
             // Creating a new window
+            
+            // Have to set minimum Height
             var windowManager = new WindowManager();
-            var settings = new WindowSettings(500, 300, SizeToContent.Manual);
+            var settings = new WindowSettings(300, 700, SizeToContent.Manual);
 
+            
             windowManager.ShowWindow(new MainWindowViewModel(), null, settings.Get());
         }
     }

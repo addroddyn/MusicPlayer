@@ -9,27 +9,27 @@ namespace MusicPlayer.Views.MainWindow
 {
     public class MainWindowViewModel : Screen
     {
-        private string _textBody;
+        private string _artistName;
         private int _counter;
-        private string _textBox;
+        private string _songName;
 
-        public string TextBody
+        public string ArtistName
         {
-            get { return this._textBody; }
+            get { return this._artistName; }
             set
             {
-                _textBody = value;
-                NotifyOfPropertyChange(() => TextBody);
+                _artistName = value;
+                NotifyOfPropertyChange(() => ArtistName);
             }
         }
 
-        public string TextBox
+        public string SongName
         {
-            get { return this._textBox; }
+            get { return this._songName; }
             set
             {
-                _textBox = value;
-                NotifyOfPropertyChange(() => TextBox);
+                _songName = value;
+                NotifyOfPropertyChange(() => SongName);
             }
         }
 
@@ -37,19 +37,20 @@ namespace MusicPlayer.Views.MainWindow
         public MainWindowViewModel()
         {
             this.DisplayName = "The best Music Player ever!";
-            this.TextBody = "textbody";
+            this.ArtistName = "Artist name goes here";
+            this.SongName = "Song name goes here";
         }
 
-        public void ChangeMessage(int parameter)
+/*        public void ChangeMessage(int parameter)
         {
-            if (this.TextBox.IsNumber())
+            if (this.SongName.IsNumber())
             {
-            	this._counter += int.Parse(TextBox);
-            	this.TextBody = this._counter.ToString();
+            	this._counter += int.Parse(SongName);
+            	this.ArtistName = this._counter.ToString();
             }
             
 
-        }
+        }*/
 
     }
 }
