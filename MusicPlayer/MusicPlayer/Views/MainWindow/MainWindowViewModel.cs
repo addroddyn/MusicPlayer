@@ -43,7 +43,11 @@ namespace MusicPlayer.Views.MainWindow
         public void ChangeMessage(int parameter)
         {
             if (this.TextBox.IsNumber())
-                this.TextBody = $"test{_counter += Convert.ToInt32(TextBox)}";
+            {
+            	this._counter += int.Parse(TextBox);
+            	this.TextBody = this._counter.ToString();
+            }
+            
 
         }
 
