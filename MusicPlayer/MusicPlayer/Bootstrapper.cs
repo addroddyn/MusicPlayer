@@ -40,13 +40,8 @@ namespace MusicPlayer
             // Have to set minimum Height
             var windowManager = new WindowManager();
             var settings = new WindowSettings(150, 700, SizeToContent.Manual);
-
-<<<<<<< HEAD
             
             windowManager.ShowWindow(new MainWindowViewModel(), null, settings.Get());
-=======
-            windowManager.ShowWindow(new TestWindowViewModel(_windsorContainer.Resolve<IAudioService>()), null, settings.Get());
->>>>>>> 79d5d3682e4277c81446498acca0289642feefaa
         }
     }
 }
