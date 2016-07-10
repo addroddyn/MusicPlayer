@@ -7,27 +7,148 @@
              xmlns:cal="http://www.caliburnproject.org"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
-             d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}">
-    <Grid>
+             d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}"
+             Background="Black">
+    <Grid Margin="3">
         
-        <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-        <Grid>
-            <TextBlock Text="{Binding ArtistName}"
-            FontSize="15"
-            FontStyle="Italic"/>
+        <!-- we will use two columns, the second one has four rows. -->
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        
+        <!-- Column 0 -->
+        <!-- album art -->
+        <Grid Margin="0, 0, 2, 0">
+            <TextBlock 
+                Background="DarkCyan"
+                Text="Placeholder for album art"/>
         </Grid>
-        <Grid Row="1">
-            <TextBlock Text="{Binding SongName}"
-            FontSize="20"
-                     />
+        
+        <!-- Colum 1 -->
+        <!-- song info + controls -->
+        <Grid Column="1" Margin="2,0,2, 0">
+            <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                
+            <!-- artist + song name -->    
+            <Grid>
+                <TextBlock
+                Margin="0, 0, 0, 2"                    
+                Text="{Binding ArtistName}"
+                Background="Cyan"
+                FontSize="15"
+                FontStyle="Italic"
+                    />
+                </Grid>
+            <Grid Row="1">
+                <TextBlock
+                Margin="0, 0, 0, 2"
+                Text="{Binding SongName}"
+                Background="DarkOrange"
+                FontSize="20"
+                    />
+                </Grid>
+            
+            <!-- song controls -->
+            <Grid Row="2">
+                    
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    
+                        <Button
+                            Margin="0, 0, 0, 0"
+                            Content="Play/Pause" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                            />
+                        <Button
+                            Margin="2, 0, 0, 0"
+                            Grid.Column ="1"
+                            Content="Stop" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                            />
+                        <Button
+                            Margin="2, 0, 0, 0"
+                            Grid.Column ="2"
+                            Content="Next" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                            />
+                        <Button
+                            Margin="2, 0, 0, 0"
+                            Grid.Column ="3"
+                            Content="Previous" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                            />
+                        <Button
+                            Margin="2, 0, 0, 0"
+                            Grid.Column ="4"
+                            Content="Open File" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                            />
+                        <Button
+                            Margin="2, 0, 0, 0"
+                            Grid.Column ="5"
+                            Content="Open Folder" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                            />
+            </Grid>
         </Grid>
-        <Grid Row="3">
-            <Button Content="Press me" cal:Message.Attach="[Event Click] = [Action ChangeMessage(2)]"/>
+        
+        <!-- Column 2 -->
+        
+        <Grid Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>            
+            </Grid.RowDefinitions>
+            
+        <!-- timer -->
+            <Grid>
+                <TextBlock
+                    Margin="2,0,0,0"
+                    Text="Timer"
+                    Background="Beige"
+                    />
+            </Grid>
+        <!-- repeat and shuffle -->
+            <Grid Row ="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            
+                <Button
+                    Margin="2, 2, 1, 2"
+                    Content ="Repeat" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                    />
+                <Button
+                    Grid.Column="1"
+                    Margin="1, 2, 0, 2"
+                    Content="Shuffle" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                    />
+            </Grid>
+        
+            <!-- playlist and equalizer -->
+            <Grid Row ="2">
+                <Button
+                    Margin="2, 0, 0, 2"
+                    Content="Playlist" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                    />
+                </Grid>
+            <Grid Row="3">
+                <Button
+                    Grid.Column="1"
+                    Margin="2, 0, 0, 0"
+                    Content="Equalizer" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                    />
+            </Grid>
+        
         </Grid>
     </Grid>
 </UserControl>
