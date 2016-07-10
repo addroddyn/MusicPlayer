@@ -36,3 +36,5 @@ E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.g.resources
 d:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe.config
 d:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe
 d:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.pdb
+E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\Views\TestWindow\TestWindowView.g.cs
+E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\Views\TestWindow\TestWindowView.baml
