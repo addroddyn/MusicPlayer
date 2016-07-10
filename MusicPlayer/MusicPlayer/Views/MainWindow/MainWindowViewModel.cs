@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using Caliburn.Micro;
 using MusicPlayer.Extensions;
+using System.Windows;
 
 namespace MusicPlayer.Views.MainWindow
 {
     public class MainWindowViewModel : Screen
     {
         private string _artistName;
-        private int _counter;
         private string _songName;
 
         public string ArtistName
@@ -41,16 +41,10 @@ namespace MusicPlayer.Views.MainWindow
             this.SongName = "Song name goes here";
         }
 
-/*        public void ChangeMessage(int parameter)
+        public void PlaceHolder()
         {
-            if (this.SongName.IsNumber())
-            {
-            	this._counter += int.Parse(SongName);
-            	this.ArtistName = this._counter.ToString();
-            }
-            
-
-        }*/
+            MessageBox.Show("Placeholder");
+        }
 
     }
 }
