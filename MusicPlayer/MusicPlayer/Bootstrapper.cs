@@ -6,8 +6,10 @@ using System.Windows;
 using Caliburn.Micro;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
+using MusicPlayer.Services.AudioService;
 using MusicPlayer.Services.Test;
 using MusicPlayer.Views.MainWindow;
+using MusicPlayer.Views.TestWindow;
 
 namespace MusicPlayer
 {
@@ -37,7 +39,7 @@ namespace MusicPlayer
             var windowManager = new WindowManager();
             var settings = new WindowSettings(500, 300, SizeToContent.Manual);
 
-            windowManager.ShowWindow(new MainWindowViewModel(), null, settings.Get());
+            windowManager.ShowWindow(new TestWindowViewModel(_windsorContainer.Resolve<IAudioService>()), null, settings.Get());
         }
     }
 }
