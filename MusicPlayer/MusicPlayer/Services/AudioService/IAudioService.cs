@@ -4,8 +4,20 @@ namespace MusicPlayer.Services.AudioService
 {
     public interface IAudioService
     {
-        void PlaySystemSound();
+        void SetAudioFile(Uri path);
 
-        void PlayAudioFile(Uri uri);
+        void Play();
+
+        void Stop();
+
+        void Pause();
+
+        bool GetIsPlaying();
+
+        void SetIsPlaying();
+
+        void SetVolumne(double volumne);
+
+        double GetVolumne();
     }
 }

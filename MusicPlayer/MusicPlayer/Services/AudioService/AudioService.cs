@@ -10,22 +10,60 @@ namespace MusicPlayer.Services.AudioService
 {
     public class AudioService : IAudioService
     {
-        private MediaPlayer _mediaPlayer;
+        private readonly MediaPlayer _mediaPlayer;
+        private Uri _path;
+
+        private bool _isPlaying;
 
         public AudioService()
         {
             _mediaPlayer = new MediaPlayer();
         }
 
-        public void  PlaySystemSound()
+        public void SetAudioFile(Uri path)
         {
-            SystemSounds.Asterisk.Play();
+            _path = path;
+            _mediaPlayer.Open(_path);
         }
 
-        public void PlayAudioFile(Uri uri)
+        public void Play()
         {
-            _mediaPlayer.Open(uri);
             _mediaPlayer.Play();
+            _isPlaying = true;
+        }
+
+        public void Pause()
+        {
+            _mediaPlayer.Pause();
+            _isPlaying = false;
+        }
+
+        public void Stop()
+        {
+            _mediaPlayer.Stop();
+            _isPlaying = false;
+        }
+
+        public void SetVolumne(double volumne)
+        {
+            if(volumne > 1.0f || volumne < 0.0f)
+                throw new NotSupportedException();
+            _mediaPlayer.Volume = volumne;
+        }
+
+        public double GetVolumne()
+        {
+            return _mediaPlayer.Volume;
+        }
+
+        public bool GetIsPlaying()
+        {
+            return _isPlaying;
+        }
+
+        public void SetIsPlaying()
+        {
+            _isPlaying = true;
         }
     }
 }
