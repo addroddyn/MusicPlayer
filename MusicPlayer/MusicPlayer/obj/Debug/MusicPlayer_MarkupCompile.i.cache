@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-d:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\
+C:\Users\Zachary\Source\Repos\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\
 MusicPlayer
 none
 false
 DEBUG;TRACE
-d:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\App.xaml
-11820925973
+C:\Users\Zachary\Source\Repos\MusicPlayer\MusicPlayer\MusicPlayer\App.xaml
+2897211689
 
-9614285885
-17-514198366
-Views\MainWindow\MainWindowView.xaml;
+18-1600450508
+17-714097026
+Views\MainWindow\MainWindowView.xaml;Views\TestWindow\TestWindowView.xaml;
 
-True
+False
 
