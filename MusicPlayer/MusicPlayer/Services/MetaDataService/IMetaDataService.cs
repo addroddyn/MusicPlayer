@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace MusicPlayer.Services.AudioService
+namespace MusicPlayer.Services.MetaDataService
 {
-    public interface IIMetaDataService
+    public interface IMetaDataService
     {
-        
+        void SongTagLib(Uri path);
     }
 }
