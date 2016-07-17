@@ -77,12 +77,14 @@
                     
                         <Button
                             Margin="0, 0, 0, 0"
-                            Content="Play/Pause" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                            Content="Play/Pause" 
+                            x:Name="PlayButtonClicked"
                             />
                         <Button
                             Margin="2, 0, 0, 0"
                             Grid.Column ="1"
-                            Content="Stop" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                            Content="Stop" 
+                            x:Name="StopButtonClicked"
                             />
                         <Button
                             Margin="2, 0, 0, 0"
@@ -97,7 +99,8 @@
                         <Button
                             Margin="2, 0, 0, 0"
                             Grid.Column ="4"
-                            Content="Open File" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                            Content="Open File"
+                            x:Name="OpenFileClicked"
                             />
                         <Button
                             Margin="2, 0, 0, 0"

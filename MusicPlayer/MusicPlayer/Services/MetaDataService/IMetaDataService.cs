@@ -23,3 +23,4 @@ namespace MusicPlayer.Services.MetaDataService
         void setYear(uint year);
         
 }
+}

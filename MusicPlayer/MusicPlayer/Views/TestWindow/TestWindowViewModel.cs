@@ -36,7 +36,7 @@ namespace MusicPlayer.Views.TestWindow
 
             if (dialog.ShowDialog() == true)
             {
-                _audioService.PlayAudioFile(new Uri(dialog.FileName));
+                _audioService.SetAudioFile(new Uri(dialog.FileName));
                 
             }
             

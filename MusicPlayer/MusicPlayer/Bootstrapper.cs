@@ -41,7 +41,7 @@ namespace MusicPlayer
             var windowManager = new WindowManager();
             var settings = new WindowSettings(180, 900, SizeToContent.Manual);
             
-            windowManager.ShowWindow(new MainWindowViewModel(), null, settings.Get());
+            windowManager.ShowWindow(new MainWindowViewModel(_windsorContainer.Resolve<IAudioService>()), null, settings.Get());
         }
     }
 }

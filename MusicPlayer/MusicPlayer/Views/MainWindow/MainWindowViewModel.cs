@@ -5,6 +5,8 @@ using System.Text;
 using Caliburn.Micro;
 using MusicPlayer.Extensions;
 using System.Windows;
+using MusicPlayer.Services.AudioService;
+using Microsoft.Win32;
 
 namespace MusicPlayer.Views.MainWindow
 {
@@ -12,6 +14,8 @@ namespace MusicPlayer.Views.MainWindow
     {
         private string _artistName;
         private string _songName;
+        private IAudioService _audioService; 
+        
 
         public string ArtistName
         {
@@ -34,16 +38,39 @@ namespace MusicPlayer.Views.MainWindow
         }
 
 
-        public MainWindowViewModel()
+        public MainWindowViewModel(IAudioService audioService)
         {
             this.DisplayName = "The best Music Player ever!";
             this.ArtistName = "Artist name goes here";
             this.SongName = "Song name goes here";
+            _audioService = audioService;
         }
 
         public void PlaceHolder()
         {
             MessageBox.Show("Placeholder");
+        }
+        
+        
+        public void PlayButtonClicked()
+        {
+            _audioService.Play();
+        }
+        
+        public void StopButtonClicked()
+        {
+            _audioService.Stop();
+        }
+        
+        public void OpenFileClicked()
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+
+            if (dialog.ShowDialog() == true)
+            {
+                _audioService.SetAudioFile(new Uri(dialog.FileName));
+                
+            }
         }
 
     }
