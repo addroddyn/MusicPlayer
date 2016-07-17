@@ -44,3 +44,5 @@ C:\Users\Zachary\Source\Repos\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\Musi
 E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\bin\Debug\policy.2.0.taglib-sharp.dll
 E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\bin\Debug\taglib-sharp.dll
 E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\bin\Debug\policy.2.0.taglib-sharp.config
+E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\Views\PlaylistWindow\PlaylistWindowView.g.cs
+E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\obj\Debug\Views\PlaylistWindow\PlaylistWindowView.baml

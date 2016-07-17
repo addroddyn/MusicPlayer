@@ -10,6 +10,7 @@ using MusicPlayer.Services.AudioService;
 using MusicPlayer.Services.Test;
 using MusicPlayer.Views.MainWindow;
 using MusicPlayer.Views.TestWindow;
+using MusicPlayer.Services.MetaDataService;
 
 namespace MusicPlayer
 {

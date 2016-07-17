@@ -158,7 +158,8 @@
             <Grid Row ="2">
                 <Button
                     Margin="2, 0, 0, 2"
-                    Content="Playlist" cal:Message.Attach="[Event Click] = [Action PlaceHolder()]"
+                    Content="Playlist" 
+                    x:Name="PlaylistButtonClicked"
                     />
                 </Grid>
             <Grid Row="3">

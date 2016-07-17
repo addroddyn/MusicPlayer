@@ -12,14 +12,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MusicPlayer.Views.TestWindow
+namespace MusicPlayer.Views.PlaylistWindow
 {
     /// <summary>
     /// Interaction logic for TestWindowView.xaml
     /// </summary>
-    public partial class TestWindowView : UserControl
+    public partial class PlaylistWindowView : UserControl
     {
-        public TestWindowView()
+        public PlaylistWindowView()
         {
             InitializeComponent();
         }

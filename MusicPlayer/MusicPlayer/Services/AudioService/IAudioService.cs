@@ -5,7 +5,7 @@ namespace MusicPlayer.Services.AudioService
     public interface IAudioService
     {
         void SetAudioFile(Uri path);
-
+        
         void Play();
 
         void Stop();

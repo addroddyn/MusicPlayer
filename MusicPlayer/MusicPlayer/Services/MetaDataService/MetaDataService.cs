@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Media;
+using System.Text;
+using System.Windows.Media;
 
 namespace MusicPlayer.Services.MetaDataService
 {
@@ -11,16 +16,20 @@ namespace MusicPlayer.Services.MetaDataService
         private string _albumTitle;
         private uint _year;
         TagLib.File tagFile;
+        private string test = "boop";
+        
         public MetaDataService()
         {
             
         }
+        
         public MetaDataService(Uri path)
         {
             _path = path;
             SongTagLib(_path);
             TagLib.File tagFile = TagLib.File.Create(_path.ToString());
         }
+        
         public void SongTagLib(Uri path)
         {
             _path = path;
@@ -29,34 +38,42 @@ namespace MusicPlayer.Services.MetaDataService
             string _albumTitle = tagFile.Tag.Album;
             uint _year = tagFile.Tag.Year;
         }
+        
         public string getArtist()
         {
-            return _artist;
+            return test;
         }
+        
         public void setArtist(string artist)
         {
             tagFile.Tag.AlbumArtists[0] = artist;
         }
+        
         public string getSongName()
         {
             return _songName;
         }
+        
         public void setSongTitle(string song)
         {
             tagFile.Tag.Title = song;
         }
+        
         public string getAlbumTitle()
         {
             return _albumTitle;
         }
+        
         public void setAlbumTitle(string album)
         {
             tagFile.Tag.Album = album;
         }
+        
         public uint getYear()
         {
             return _year;
         }
+        
         public void setYear(uint year)
         {
             tagFile.Tag.Year = year;

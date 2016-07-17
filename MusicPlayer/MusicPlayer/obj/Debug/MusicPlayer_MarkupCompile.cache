@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\mas\git\MusicPlayer\MusicPlayer\MusicPlayer\App.xaml
-2897211689
+3460127925
 
-17-1186216464
+19834987624
 19-1039019284
-Views\MainWindow\MainWindowView.xaml;Views\TestWindow\TestWindowView.xaml;
+Views\MainWindow\MainWindowView.xaml;Views\PlaylistWindow\PlaylistWindowView.xaml;Views\TestWindow\TestWindowView.xaml;
 
 False
 

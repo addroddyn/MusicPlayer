@@ -107,6 +107,10 @@
       <DependentUpon>MainWindowView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow\MainWindowViewModel.cs" />
+    <Compile Include="Views\PlaylistWindow\PlaylistWindowView.xaml.cs">
+      <DependentUpon>PlaylistWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlaylistWindow\PlaylistWindowViewModel.cs" />
     <Compile Include="Views\TestWindow\TestWindowView.xaml.cs">
       <DependentUpon>TestWindowView.xaml</DependentUpon>
     </Compile>
@@ -122,6 +126,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\PlaylistWindow\PlaylistWindowView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\TestWindow\TestWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -129,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="System\" />
+    <Folder Include="Views\PlaylistWindow" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

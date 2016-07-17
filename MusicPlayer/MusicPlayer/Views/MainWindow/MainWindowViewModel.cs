@@ -7,6 +7,7 @@ using MusicPlayer.Extensions;
 using System.Windows;
 using MusicPlayer.Services.AudioService;
 using Microsoft.Win32;
+using MusicPlayer.Views.PlaylistWindow;
 
 namespace MusicPlayer.Views.MainWindow
 {
@@ -14,7 +15,8 @@ namespace MusicPlayer.Views.MainWindow
     {
         private string _artistName;
         private string _songName;
-        private IAudioService _audioService; 
+        private IAudioService _audioService;
+        private bool isPlaylistOpen = false;
         
 
         public string ArtistName
@@ -41,9 +43,10 @@ namespace MusicPlayer.Views.MainWindow
         public MainWindowViewModel(IAudioService audioService)
         {
             this.DisplayName = "The best Music Player ever!";
-            this.ArtistName = "Artist name goes here";
-            this.SongName = "Song name goes here";
+            this.ArtistName = "Welcome to the";
+            this.SongName = "best music player ever!";
             _audioService = audioService;
+           // _metaDataService = metaDataService;
         }
 
         public void PlaceHolder()
@@ -65,13 +68,25 @@ namespace MusicPlayer.Views.MainWindow
         public void OpenFileClicked()
         {
             OpenFileDialog dialog = new OpenFileDialog();
-
             if (dialog.ShowDialog() == true)
             {
                 _audioService.SetAudioFile(new Uri(dialog.FileName));
-                
             }
         }
-
+        
+        public void PlaylistButtonClicked()
+        {
+            var windowManager = new WindowManager();
+            var settings = new WindowSettings(600, 300, SizeToContent.Manual);
+            
+            if(isPlaylistOpen)
+            {
+                
+            }
+            else
+            {   
+                windowManager.ShowWindow(new PlaylistWindowViewModel(), null, settings.Get());
+            }
+        }
     }
 }

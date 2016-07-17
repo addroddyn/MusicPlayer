@@ -25,7 +25,7 @@ namespace MusicPlayer.Services.AudioService
             _path = path;
             _mediaPlayer.Open(_path);
         }
-
+        
         public void Play()
         {
             _mediaPlayer.Play();
