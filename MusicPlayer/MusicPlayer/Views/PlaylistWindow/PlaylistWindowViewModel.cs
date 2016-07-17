@@ -11,26 +11,17 @@ namespace MusicPlayer.Views.PlaylistWindow
 {
     public class PlaylistWindowViewModel : Screen
     {
-        private readonly IAudioService _audioService;
-        private string _text;
-
-        public string Text
-        {
-            get { return this._text; }
-            set
-            {
-                _text = value;
-                NotifyOfPropertyChange(() => Text);
-            }
-        }
-
+        
         public PlaylistWindowViewModel()
         {
             this.DisplayName = "Playlist";
+            
+            
         }
 
-        public void makeboop()
+        public void ClosePlaylist()
         {
+            App.Current.Windows[1].Close();
             
         }
     }

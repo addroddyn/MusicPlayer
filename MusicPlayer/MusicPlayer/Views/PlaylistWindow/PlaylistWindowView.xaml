@@ -12,4 +12,5 @@
             <Button x:Name="makeboop" Content="play"/>
         </StackPanel>
     </Grid>
+
 </UserControl>

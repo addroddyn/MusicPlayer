@@ -18,6 +18,7 @@ namespace MusicPlayer.Views.MainWindow
         private IAudioService _audioService;
         private bool isPlaylistOpen = false;
         
+        
 
         public string ArtistName
         {
@@ -76,16 +77,25 @@ namespace MusicPlayer.Views.MainWindow
         
         public void PlaylistButtonClicked()
         {
-            var windowManager = new WindowManager();
-            var settings = new WindowSettings(600, 300, SizeToContent.Manual);
+            var playlistWindow = new PlaylistWindowViewModel();
+            var playlistWindowManager = new WindowManager();
+                var settings = new WindowSettings(600, 300, SizeToContent.Manual);
+            //playlistWindow.DataContext = PlaylistWindowView();
             
             if(isPlaylistOpen)
             {
+                isPlaylistOpen = false;
+                //Application.Current.Windows.OfType().First().Close();
+                playlistWindow.ClosePlaylist();
                 
             }
             else
             {   
-                windowManager.ShowWindow(new PlaylistWindowViewModel(), null, settings.Get());
+                isPlaylistOpen = true;
+                
+                playlistWindowManager.ShowWindow(playlistWindow, null, settings.Get());
+                
+                //playlistWindowManager.ShowWindow(new PlaylistWindowViewModel(), null, settings.Get());
             }
         }
     }
